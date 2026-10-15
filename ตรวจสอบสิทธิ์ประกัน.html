@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Poseify - Modeling Agency Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Work+Sans:wght@400;600&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Header Start -->
+     <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-lg-5">
+            <a href="หน้าหลัก.html" class="navbar-brand ms-4 ms-lg-0">
+                <h2 class="mb-0 text-primary text-uppercase"><i class="fa-regular fa-face-smile me-1"></i>SWU</h2>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto p-4 p-lg-0">
+                    <a href="หน้าหลัก.html" class="nav-item nav-link">หน้าหลัก</a>
+                    <a href="เกี่ยวกับเรา.html" class="nav-item nav-link">เกี่ยวกับเรา</a>
+                    <a href="แผนประกัน.html" class="nav-item nav-link">แผนประกัน</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">บริการนักศึกษา</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="ตรวจสอบสิทธิ์ประกัน.html" class="dropdown-item active">ตรวจสอบสิทธิ์ประกัน</a>
+                            <a href="ข้อมูลกรมธรรม์.html" class="dropdown-item">ข้อมูลกรมธรรม์</a>
+                            <a href="เคลมประกัน.html" class="dropdown-item">ขั้นตอนการเคลมประกัน</a>
+                        </div>
+                    </div>
+                    <a href="ติดต่อ.html" class="nav-item nav-link">ติดต่อเรา</a>
+                </div>
+                <div class="d-none d-lg-flex">
+                    <a class="btn btn-outline-primary border-2" href="login.html">เข้าสู่ระบบ</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="page-header pb-5">
+            <div class="container text-center py-5">
+                <h1 class="display-4 text-uppercase mb-3 animated slideInDown">ตรวจสอบสิทธิ์ประกัน</h1>
+                <nav aria-label="breadcrumb animated slideInDown">
+                    <ol class="breadcrumb justify-content-center text-uppercase mb-0">
+                        <li class="breadcrumb-item"><a class="text-white" href="#">หน้าหลัก</a></li>
+                        <li class="breadcrumb-item"><a class="text-white" href="#">บริการนักศึกษา</a></li>
+                        <li class="breadcrumb-item text-primary active" aria-current="page">ตรวจสอบสิทธิ์ประกัน</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+<!-- Student Insurance Eligibility -->
+<section class="insurance-page">
+
+    <!-- Page Header -->
+    <div class="insurance-header">
+        <span class="insurance-label">SAFE CAMPUS / INSURANCE</span>
+        <h1>สิทธิ์ประกันของฉัน</h1>
+        <p>
+            ตรวจสอบสถานะสิทธิ์ประกัน ข้อมูลกรมธรรม์
+            รายละเอียดความคุ้มครอง และประวัติการใช้สิทธิ์ของคุณ
+        </p>
+    </div>
+
+    <!-- Search -->
+    <div class="insurance-card search-card">
+        <h2>ตรวจสอบสิทธิ์ประกัน</h2>
+        <p>กรอกรหัสนักศึกษาเพื่อค้นหาข้อมูลสิทธิ์ประกัน</p>
+
+        <form id="insuranceSearchForm">
+            <label for="studentId">รหัสนักศึกษา</label>
+            <div class="search-row">
+                <input
+                    type="text"
+                    id="studentId"
+                    placeholder="กรอกรหัสนักศึกษา"
+                    maxlength="20"
+                    required
+                >
+                <button type="submit">ตรวจสอบสิทธิ์</button>
+            </div>
+        </form>
+
+        <p class="form-message" id="formMessage" aria-live="polite"></p>
+    </div>
+
+    <!-- Result -->
+    <div id="insuranceResult" hidden>
+
+        <!-- Eligibility Status -->
+        <div class="eligibility-banner">
+            <div class="status-icon">✓</div>
+            <div>
+                <span class="status-label">สถานะสิทธิ์ประกัน</span>
+                <h2 id="eligibilityStatus">มีสิทธิ์ได้รับความคุ้มครอง</h2>
+                <p id="eligibilityDescription">
+                    ข้อมูลตัวอย่างสำหรับแสดงรูปแบบหน้าเว็บ
+                </p>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="insurance-summary">
+            <div class="summary-card">
+                <span>แพ็กเกจปัจจุบัน</span>
+                <h3 id="planName">Campus Care</h3>
+                <p>แผนประกันนักศึกษาพื้นฐาน</p>
+            </div>
+
+            <div class="summary-card">
+                <span>เบี้ยประกันต่อปี</span>
+                <h3 id="premium">฿699</h3>
+                <p>ตามข้อมูลแพ็กเกจ</p>
+            </div>
+
+            <div class="summary-card">
+                <span>วันเริ่มคุ้มครอง</span>
+                <h3 id="coverageStart">-</h3>
+                <p>วันที่เริ่มมีผลตามกรมธรรม์</p>
+            </div>
+
+            <div class="summary-card">
+                <span>วันสิ้นสุดความคุ้มครอง</span>
+                <h3 id="coverageEnd">-</h3>
+                <p>ตรวจสอบวันหมดอายุกรมธรรม์</p>
+            </div>
+        </div>
+
+        <!-- Student Information -->
+        <div class="insurance-card">
+            <div class="section-heading">
+                <span class="section-number">01</span>
+                <div>
+                    <h2>ข้อมูลนักศึกษา</h2>
+                    <p>ข้อมูลส่วนตัวที่เชื่อมโยงกับสิทธิ์ประกัน</p>
+                </div>
+            </div>
+
+            <div class="detail-grid">
+                <div class="detail-item">
+                    <span>ชื่อ - นามสกุล</span>
+                    <strong id="studentName">-</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>รหัสนักศึกษา</span>
+                    <strong id="studentCode">-</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>คณะ</span>
+                    <strong id="studentFaculty">-</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>สาขาวิชา</span>
+                    <strong id="studentMajor">-</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>มหาวิทยาลัย</span>
+                    <strong id="studentUniversity">-</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>สถานภาพนักศึกษา</span>
+                    <strong id="studentStatus">-</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Policy Information -->
+        <div class="insurance-card">
+            <div class="section-heading">
+                <span class="section-number">02</span>
+                <div>
+                    <h2>ข้อมูลกรมธรรม์</h2>
+                    <p>รายละเอียดแผนประกันที่นักศึกษาได้รับ</p>
+                </div>
+            </div>
+
+            <div class="detail-grid">
+                <div class="detail-item">
+                    <span>ชื่อแผนประกัน</span>
+                    <strong id="policyPlan">Campus Care</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>เลขที่กรมธรรม์</span>
+                    <strong id="policyNumber">-</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>ประเภทประกัน</span>
+                    <strong id="policyType">ประกันอุบัติเหตุนักศึกษา</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>บริษัทประกันภัย</span>
+                    <strong id="insuranceCompany">รอระบุข้อมูลจริง</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>สถานะการชำระเงิน</span>
+                    <strong id="paymentStatus">-</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>สถานะกรมธรรม์</span>
+                    <strong id="policyStatus">-</strong>
+                </div>
+            </div>
+
+            <div class="document-note">
+                <div>
+                    <strong>เอกสารกรมธรรม์</strong>
+                    <p>ตรวจสอบรายละเอียดและเงื่อนไขจากเอกสารฉบับจริง</p>
+                </div>
+    <span class="document-icon">PDF</span>
+            </div>
+        </div>
+
+        <!-- Coverage Details -->
+        <div class="insurance-card">
+            <div class="section-heading">
+                <span class="section-number">03</span>
+                <div>
+                    <h2>รายละเอียดความคุ้มครอง</h2>
+                    <p>ตรวจสอบขอบเขตสิทธิ์ตามแผนประกัน</p>
+                </div>
+            </div>
+
+            <div class="coverage-list">
+                <div class="coverage-item">
+                    <div class="coverage-icon">+</div>
+                    <div>
+                        <h3>ค่ารักษาพยาบาลจากอุบัติเหตุ</h3>
+                        <p>วงเงินและเงื่อนไขเป็นไปตามกรมธรรม์ฉบับจริง</p>
+                    </div>
+                    <span class="coverage-tag">รายละเอียด</span>
+                </div>
+
+                <div class="coverage-item">
+                    <div class="coverage-icon">+</div>
+                    <div>
+                        <h3>ผลประโยชน์กรณีอุบัติเหตุ</h3>
+                        <p>ตรวจสอบประเภทผลประโยชน์และวงเงินตามกรมธรรม์</p>
+                    </div>
+                    <span class="coverage-tag">รายละเอียด</span>
+                </div>
+
+                <div class="coverage-item">
+                    <div class="coverage-icon">+</div>
+                    <div>
+                        <h3>การเข้ารับบริการทางการแพทย์</h3>
+                        <p>ตรวจสอบขั้นตอนการใช้สิทธิ์และเอกสารที่ต้องใช้</p>
+                    </div>
+                    <span class="coverage-tag">รายละเอียด</span>
+                </div>
+
+                <div class="coverage-item">
+                    <div class="coverage-icon">!</div>
+                    <div>
+                        <h3>ข้อยกเว้นความคุ้มครอง</h3>
+                        <p>ควรอ่านข้อยกเว้นและเงื่อนไขก่อนใช้สิทธิ์ทุกครั้ง</p>
+                    </div>
+                    <span class="coverage-tag">ข้อควรทราบ</span>
+                </div>
+            </div>
+
+            <p class="disclaimer">
+                หมายเหตุ: รายการข้างต้นเป็นหัวข้อสำหรับแสดงข้อมูล
+                ไม่ใช่การรับรองว่าความคุ้มครองทุกประเภทมีอยู่ในแพ็กเกจ
+                ต้องระบุวงเงินและเงื่อนไขตามกรมธรรม์จริง
+            </p>
+        </div>
+
+        <!-- Claim History -->
+        <div class="insurance-card">
+            <div class="section-heading">
+                <span class="section-number">04</span>
+                <div>
+                    <h2>ประวัติการใช้สิทธิ์</h2>
+                    <p>ตรวจสอบรายการเคลมและสถานะการดำเนินการ</p>
+                </div>
+            </div>
+
+            <div id="claimHistory" class="empty-history">
+                <div class="history-icon">▤</div>
+                <h3>ยังไม่มีประวัติการใช้สิทธิ์</h3>
+                <p>เมื่อมีข้อมูลการเคลม รายการจะแสดงในส่วนนี้</p>
+            </div>
+        </div>
+
+        <!-- Upgrade Plan -->
+        <div class="upgrade-card">
+            <div>
+                <span class="insurance-label">UPGRADE YOUR COVERAGE</span>
+                <h2>ต้องการความคุ้มครองเพิ่มเติมหรือไม่?</h2>
+                <p>
+                    เปรียบเทียบแพ็กเกจประกันอื่น ๆ
+                    เพื่อเลือกความคุ้มครองที่เหมาะสมกับคุณ
+                </p>
+            </div>
+
+            <a href="แผนประกัน.html" class="upgrade-button">
+                ดูแพ็กเกจประกันทั้งหมด →
+            </a>
+
+            <p class="upgrade-note">
+                หากอัปเกรด ระบบควรแสดงราคาแพ็กเกจใหม่
+                เครดิตจาก Campus Care และยอดชำระเพิ่มก่อนยืนยัน
+            </p>
+        </div>
+
+        <!-- Support -->
+        <div class="insurance-card">
+            <div class="section-heading">
+                <span class="section-number">05</span>
+                <div>
+                    <h2>ติดต่อขอความช่วยเหลือ</h2>
+                    <p>หากพบข้อมูลผิดพลาด สามารถติดต่อผู้ดูแลสิทธิ์ได้</p>
+                </div>
+            </div>
+
+            <div class="support-list">
+                <div>
+                    <strong>ฝ่ายดูแลสิทธิ์นักศึกษา</strong>
+                    <p>สอบถามสถานะและข้อมูลสิทธิ์ประกัน</p>
+                </div>
+
+                <div>
+                    <strong>ผู้ประสานงานประกันภัย</strong>
+                    <p>สอบถามรายละเอียดกรมธรรม์และการเคลม</p>
+                </div>
+
+                <div>
+                    <strong>แจ้งข้อมูลไม่ถูกต้อง</strong>
+                    <p>ขอให้เจ้าหน้าที่ตรวจสอบและแก้ไขข้อมูล</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+/* ===== Insurance Page ===== */
+.insurance-page {
+    --insurance-pink: #ff1685;
+    --insurance-bg: #111114;
+    --insurance-card: #1b1b20;
+    --insurance-border: #35353d;
+    --insurance-text: #f5f5f7;
+    --insurance-muted: #a5a5b0;
+
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 55px 24px 80px;
+    color: var(--insurance-text);
+    font-family: inherit;
+    line-height: 1.7;
+}
+
+.insurance-page * {
+    box-sizing: border-box;
+}
+
+.insurance-page [hidden] {
+    display: none !important;
+}
+
+.insurance-header {
+    margin-bottom: 32px;
+}
+
+.insurance-label {
+    display: inline-block;
+    color: var(--insurance-pink);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.insurance-header h1 {
+    color: var(--insurance-text);
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    margin: 0 0 12px;
+}
+
+.insurance-header > p {
+    color: var(--insurance-muted);
+    margin: 0;
+    max-width: 720px;
+}
+
+.insurance-card {
+    background: var(--insurance-card);
+    border: 1px solid var(--insurance-border);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 24px;
+}
+
+.insurance-card h2,
+.upgrade-card h2 {
+    color: var(--insurance-text);
+    margin-top: 0;
+}
+
+.insurance-card p {
+    color: var(--insurance-muted);
+}
+
+.search-card > h2 {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.search-card > p {
+    margin-top: 0;
+}
+
+.search-card label {
+    display: block;
+    color: var(--insurance-text);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.search-row {
+    display: flex;
+    gap: 12px;
+}
+
+.search-row input {
+    flex: 1;
+    min-width: 0;
+    background: #111114;
+    color: #fff;
+    border: 1px solid #45454f;
+    border-radius: 8px;
+    padding: 14px 16px;
+    font: inherit;
+}
+
+.search-row input:focus {
+    outline: 2px solid var(--insurance-pink);
+    outline-offset: 2px;
+}
+
+.search-row button,
+.upgrade-button {
+    background: var(--insurance-pink);
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    padding: 13px 22px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: opacity .2s ease;
+}
+
+.search-row button:hover,
+.upgrade-button:hover {
+    opacity: .85;
+    color: #fff;
+}
+
+.form-message {
+    font-size: 14px;
+    margin: 12px 0 0;
+}
+
+.form-message.error {
+    color: #ff7777;
+}
+
+.form-message.success {
+    color: #7ce0a0;
+}
+
+/* Eligibility */
+.eligibility-banner {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 24px;
+    border: 1px solid #315c40;
+    border-radius: 14px;
+    background: #19251e;
+    margin-bottom: 24px;
+}
+
+.status-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #245b37;
+    color: #8cf0ad;
+    font-size: 25px;
+}
+
+.status-label {
+    color: #8cf0ad;
+    font-size: 13px;
+}
+
+.eligibility-banner h2 {
+    color: #8cf0ad;
+    font-size: 20px;
+    margin: 3px 0;
+}
+
+.eligibility-banner p {
+    color: #c1d2c6;
+    margin: 0;
+    font-size: 14px;
+}
+
+.insurance-summary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.summary-card {
+    padding: 22px;
+    background: var(--insurance-card);
+    border: 1px solid var(--insurance-border);
+    border-radius: 14px;
+}
+
+.summary-card > span,
+.detail-item > span {
+    display: block;
+    color: var(--insurance-muted);
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.summary-card h3 {
+    color: var(--insurance-pink);
+    font-size: 22px;
+    margin: 4px 0;
+    overflow-wrap: anywhere;
+}
+
+.summary-card p {
+    color: var(--insurance-muted);
+    font-size: 13px;
+    margin: 0;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.section-number {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(255, 22, 133, .12);
+    color: var(--insurance-pink);
+    font-weight: 700;
+}
+
+.section-heading h2 {
+    font-size: 21px;
+    margin: 0 0 4px;
+}
+
+.section-heading p {
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Detail Grid */
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.detail-item {
+    min-width: 0;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--insurance-border);
+}
+
+.detail-item strong {
+    color: var(--insurance-text);
+    display: block;
+    overflow-wrap: anywhere;
+}
+
+/* Policy Document */
+.document-note {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: #242027;
+    border: 1px solid #43303b;
+    border-radius: 12px;
+    padding: 18px;
+    margin-top: 24px;
+}
+
+.document-note strong {
+    color: var(--insurance-text);
+}
+
+.document-note p {
+    margin: 4px 0 0;
+    font-size: 13px;
+}
+
+.document-icon {
+    color: var(--insurance-pink);
+    font-size: 13px;
+    font-weight: 700;
+    border: 1px solid var(--insurance-pink);
+    border-radius: 6px;
+    padding: 6px 10px;
+}
+
+/* Coverage */
+.coverage-list {
+    display: grid;
+    gap: 12px;
+}
+
+.coverage-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid var(--insurance-border);
+    border-radius: 12px;
+    background: #202025;
+}
+
+.coverage-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+        width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: var(--insurance-pink);
+    background: rgba(255, 22, 133, .12);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.coverage-item > div:nth-child(2) {
+    flex: 1;
+    min-width: 0;
+}
+
+.coverage-item h3 {
+    color: var(--insurance-text);
+    font-size: 16px;
+    margin: 0 0 4px;
+}
+
+.coverage-item p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.coverage-tag {
+    color: var(--insurance-pink);
+    border: 1px solid #62304a;
+    border-radius: 20px;
+    padding: 4px 9px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.disclaimer,
+.upgrade-note {
+    color: var(--insurance-muted);
+    font-size: 12px;
+    margin: 18px 0 0;
+}
+
+/* Claim History */
+.empty-history {
+    text-align: center;
+    padding: 34px 18px;
+    border: 1px dashed #45454f;
+    border-radius: 12px;
+}
+
+.history-icon {
+    color: var(--insurance-pink);
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.empty-history h3 {
+    color: var(--insurance-text);
+    margin: 0 0 5px;
+    font-size: 17px;
+}
+
+.empty-history p {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* Upgrade */
+.upgrade-card {
+    padding: 30px;
+    margin-bottom: 24px;
+    border: 1px solid #65304b;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #27141f, #1b1b20 75%);
+}
+
+.upgrade-card h2 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.upgrade-card > div > p {
+    color: #c2b8c0;
+    margin: 0 0 20px;
+}
+
+.upgrade-button {
+    display: inline-block;
+}
+
+.upgrade-note {
+    margin-bottom: 0;
+}
+
+/* Support */
+.support-list {
+    display: grid;
+    gap: 0;
+}
+
+.support-list > div {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--insurance-border);
+}
+
+.support-list > div:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.support-list strong {
+    color: var(--insurance-text);
+}
+
+.support-list p {
+    font-size: 13px;
+    margin: 4px 0 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .insurance-page {
+        padding: 32px 16px 50px;
+    }
+
+    .insurance-card {
+        padding: 20px;
+    }
+
+    .search-row {
+        flex-direction: column;
+    }
+
+    .search-row button {
+        width: 100%;
+    }
+
+    .insurance-summary,
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .coverage-item {
+        flex-wrap: wrap;
+    }
+
+    .coverage-tag {
+        margin-left: 46px;
+    }
+
+    .eligibility-banner {
+        align-items: flex-start;
+        padding: 18px;
+    }
+
+    .upgrade-card {
+        padding: 22px;
+    }
+
+    .upgrade-button {
+        display: block;
+        width: 100%;
+    }
+}
+</style>
+
+<script>
+/*
+ * DEMO ONLY
+ * ข้อมูลด้านล่างเป็นข้อมูลสมมติสำหรับทดสอบหน้าตาเว็บ
+ * ไม่ใช่ฐานข้อมูลนักศึกษาจริง
+ */
+const demoInsuranceData = {
+    "DEMO001": {
+        name: "นายตัวอย่าง นักศึกษา",
+        studentId: "DEMO001",
+        faculty: "คณะวิศวกรรมศาสตร์",
+        major: "วิศวกรรมคอมพิวเตอร์",
+        university: "มหาวิทยาลัยตัวอย่าง",
+        studentStatus: "กำลังศึกษา",
+        plan: "Campus Care",
+        premium: "฿699",
+        coverageStart: "01/06/2569",
+        coverageEnd: "31/05/2570",
+        policyNumber: "POL-DEMO-001",
+        policyType: "ประกันอุบัติเหตุนักศึกษา",
+        company: "บริษัทประกันภัยตัวอย่าง",
+        paymentStatus: "ชำระแล้ว (ข้อมูลตัวอย่าง)",
+        policyStatus: "มีผลคุ้มครอง (ข้อมูลตัวอย่าง)",
+        eligibility: "มีสิทธิ์ได้รับความคุ้มครอง"
+    }
+};
+
+const insuranceForm = document.getElementById("insuranceSearchForm");
+const insuranceInput = document.getElementById("studentId");
+const insuranceResult = document.getElementById("insuranceResult");
+const formMessage = document.getElementById("formMessage");
+
+insuranceForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const studentId = insuranceInput.value.trim();
+
+    formMessage.textContent = "";
+    formMessage.className = "form-message";
+    insuranceResult.hidden = true;
+
+    if (!studentId) {
+        showMessage("กรุณากรอกรหัสนักศึกษา", "error");
+        return;
+    }
+
+    /*
+     * ในระบบจริง ต้องเปลี่ยนส่วนนี้เป็นการเรียก API
+     * ที่ตรวจสอบตัวตนและสิทธิ์จากเซิร์ฟเวอร์
+     */
+    const student = demoInsuranceData[studentId];
+
+    if (!student) {
+        showMessage(
+            "ไม่พบข้อมูลตัวอย่าง กรุณาใช้รหัส DEMO001 เพื่อทดลองหน้าจอ",
+            "error"
+        );
+        return;
+    }
+
+    setText("studentName", student.name);
+    setText("studentCode", student.studentId);
+    setText("studentFaculty", student.faculty);
+    setText("studentMajor", student.major);
+    setText("studentUniversity", student.university);
+    setText("studentStatus", student.studentStatus);
+
+    setText("planName", student.plan);
+    setText("premium", student.premium);
+    setText("coverageStart", student.coverageStart);
+    setText("coverageEnd", student.coverageEnd);
+
+    setText("policyPlan", student.plan);
+    setText("policyNumber", student.policyNumber);
+    setText("policyType", student.policyType);
+    setText("insuranceCompany", student.company);
+    setText("paymentStatus", student.paymentStatus);
+    setText("policyStatus", student.policyStatus);
+
+    setText("eligibilityStatus", student.eligibility);
+    setText(
+        "eligibilityDescription",
+        "ข้อมูลสาธิตเท่านั้น กรุณายืนยันสถานะจากระบบจริง"
+    );
+
+    insuranceResult.hidden = false;
+    showMessage("แสดงข้อมูลตัวอย่างเรียบร้อย", "success");
+});
+
+function setText(id, value) {
+    document.getElementById(id).textContent = value;
+}
+
+function showMessage(message, type) {
+    formMessage.textContent = message;
+    formMessage.className = "form-message " + type;
+}
+</script>
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <a href="หน้าหลัก.html">
+                <h1 class="display-4 mb-3 text-white text-uppercase"><i class="fa-regular fa-face-smile me-1"></i>SWU</h1>
+            </a>
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-x-twitter"></i></a>
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <!--/*** The author’s attribution link must remain intact in the template. ***/-->
+            <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
+            <p class="mb-0">Designed By <a class="border-bottom" href="เกี่ยวกับเรา.html">วอดวาย</a></p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

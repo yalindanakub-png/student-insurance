@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Poseify - Modeling Agency Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Work+Sans:wght@400;600&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Header Start -->
+     <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-lg-5">
+            <a href="หน้าหลัก.html" class="navbar-brand ms-4 ms-lg-0">
+                <h2 class="mb-0 text-primary text-uppercase"><i class="fa-regular fa-face-smile me-1"></i>SWU</h2>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto p-4 p-lg-0">
+                    <a href="หน้าหลัก.html" class="nav-item nav-link">หน้าหลัก</a>
+                    <a href="เกี่ยวกับเรา.html" class="nav-item nav-link">เกี่ยวกับเรา</a>
+                    <a href="แผนประกัน.html" class="nav-item nav-link">แผนประกัน</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">บริการนักศึกษา</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="ตรวจสอบสิทธิ์ประกัน.html" class="dropdown-item">ตรวจสอบสิทธิ์ประกัน</a>
+                            <a href="ข้อมูลกรมธรรม์.html" class="dropdown-item">ข้อมูลกรมธรรม์</a>
+                            <a href="เคลมประกัน.html" class="dropdown-item active">ขั้นตอนการเคลมประกัน</a>
+                        </div>
+                    </div>
+                    <a href="ติดต่อ.html" class="nav-item nav-link">ติดต่อเรา</a>
+                </div>
+                <div class="d-none d-lg-flex">
+                    <a class="btn btn-outline-primary border-2" href="login.html">เข้าสู่ระบบ</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="page-header pb-5">
+            <div class="container text-center py-5">
+                <h1 class="display-4 text-uppercase mb-3 animated slideInDown">ขั้นตอนการเคลมประกัน</h1>
+                <nav aria-label="breadcrumb animated slideInDown">
+                    <ol class="breadcrumb justify-content-center text-uppercase mb-0">
+                        <li class="breadcrumb-item"><a class="text-white" href="#">หน้าหลัก</a></li>
+                        <li class="breadcrumb-item"><a class="text-white" href="#">บริการนักศึกษา</a></li>
+                        <li class="breadcrumb-item text-primary active" aria-current="page">ขั้นตอนการเคลมประกัน</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+<!-- Insurance Claim Procedure Start -->
+<section class="claim-section" id="claim">
+    <div class="claim-container">
+        <!-- Heading -->
+        <div class="claim-heading">
+            <span class="claim-eyebrow">STUDENT INSURANCE SERVICE</span>
+            <p>
+                แนวทางการยื่นขอรับค่าสินไหมทดแทนสำหรับนักศึกษา
+                เพื่อให้การดำเนินการเป็นไปอย่างถูกต้อง ครบถ้วน
+                และเป็นไปตามเงื่อนไขที่กำหนดไว้ในกรมธรรม์ประกันภัย
+            </p>
+        </div>
+        <!-- Notice -->
+        <div class="claim-notice">
+            <div class="claim-notice-icon">!</div>
+            <div>
+                <h3>ข้อควรทราบก่อนยื่นเคลมประกัน</h3>
+                <p>
+                    นักศึกษาควรตรวจสอบสิทธิ์ ความคุ้มครอง
+                    วงเงินผลประโยชน์ ระยะเวลาการยื่นคำร้อง
+                    และเอกสารที่ต้องใช้ตามกรมธรรม์ของตนเอง
+                    ก่อนดำเนินการทุกครั้ง
+                </p>
+            </div>
+        </div>
+        <!-- Steps -->
+        <div class="claim-steps">
+            <!-- Step 1 -->
+            <article class="claim-card">
+                <div class="claim-card-top">
+                    <span class="claim-number">01</span>
+                    <span class="claim-label">STEP 01</span>
+                </div>
+                <h3>ตรวจสอบสิทธิ์และความคุ้มครอง</h3>
+                <p>
+                    ตรวจสอบสถานะกรมธรรม์และรายละเอียดความคุ้มครอง
+                    เพื่อพิจารณาว่าเหตุการณ์ที่เกิดขึ้นอยู่ภายใต้
+                    ขอบเขตความคุ้มครองของประกันภัยหรือไม่
+                </p>
+                <ul>
+                    <li>ตรวจสอบสถานะการเป็นผู้เอาประกันภัย</li>
+                    <li>ตรวจสอบประเภทเหตุการณ์ที่ได้รับความคุ้มครอง</li>
+                    <li>ตรวจสอบวงเงินและข้อยกเว้นตามกรมธรรม์</li>
+                    <li>ตรวจสอบระยะเวลาและช่องทางการยื่นเคลม</li>
+                </ul>
+            </article>
+            <!-- Step 2 -->
+            <article class="claim-card">
+                <div class="claim-card-top">
+                    <span class="claim-number">02</span>
+                    <span class="claim-label">STEP 02</span>
+                </div>
+                <h3>รวบรวมเอกสารประกอบการเคลม</h3>
+                <p>
+                    จัดเตรียมเอกสารและหลักฐานที่เกี่ยวข้อง
+                    ให้ครบถ้วนตามประเภทการเรียกร้องค่าสินไหม
+                    เพื่อประกอบการพิจารณาของบริษัทประกันภัย
+                </p>
+                <ul>
+                    <li>แบบฟอร์มเรียกร้องค่าสินไหมทดแทน</li>
+                    <li>สำเนาบัตรประจำตัวประชาชนหรือเอกสารยืนยันตัวตน</li>
+                    <li>เอกสารรับรองสิทธิ์หรือข้อมูลกรมธรรม์</li>
+                    <li>ใบรับรองแพทย์และเอกสารทางการแพทย์ (กรณีเกี่ยวข้อง)</li>
+                    <li>ใบเสร็จรับเงินและใบแจ้งรายละเอียดค่ารักษาพยาบาล (ถ้ามี)</li>
+                    <li>หลักฐานอื่น ๆ ตามที่บริษัทประกันภัยร้องขอ</li>
+                </ul>
+            </article>
+            <!-- Step 3 -->
+            <article class="claim-card">
+                <div class="claim-card-top">
+                    <span class="claim-number">03</span>
+                    <span class="claim-label">STEP 03</span>
+                </div>
+                <h3>ยื่นคำร้องและส่งเอกสาร</h3>
+                <p>
+                    ส่งแบบฟอร์มเรียกร้องค่าสินไหมทดแทน
+                    พร้อมเอกสารประกอบผ่านช่องทางที่บริษัทประกันภัย
+                    หรือหน่วยงานที่รับผิดชอบกำหนด
+                </p>
+                <ul>
+                    <li>กรอกข้อมูลผู้เอาประกันภัยให้ถูกต้อง</li>
+                    <li>ระบุรายละเอียดวัน เวลา และลักษณะของเหตุการณ์</li>
+                    <li>ตรวจสอบความครบถ้วนของเอกสารก่อนส่ง</li>
+                    <li>เก็บหลักฐานการยื่นคำร้องหรือเลขที่รับเรื่องไว้</li>
+                </ul>
+            </article>
+            <!-- Step 4 -->
+            <article class="claim-card">
+                <div class="claim-card-top">
+                    <span class="claim-number">04</span>
+                    <span class="claim-label">STEP 04</span>
+                </div>
+                <h3>ติดตามผลการพิจารณา</h3>
+                <p>
+                    บริษัทประกันภัยจะตรวจสอบสิทธิ์
+                    ความคุ้มครอง และเอกสารประกอบการเรียกร้อง
+                    ก่อนแจ้งผลการพิจารณาตามกระบวนการที่กำหนด
+                </p>
+                <ul>
+                    <li>ติดตามสถานะผ่านช่องทางที่ยื่นคำร้อง</li>
+                    <li>จัดส่งเอกสารเพิ่มเติมเมื่อได้รับการร้องขอ</li>
+                    <li>ตรวจสอบผลการพิจารณาและจำนวนเงินที่ได้รับอนุมัติ</li>
+                    <li>สอบถามเจ้าหน้าที่หากต้องการข้อมูลเพิ่มเติม</li>
+                </ul>
+            </article>
+        </div>
+        <!-- Document checklist -->
+        <div class="claim-documents">
+            <div class="claim-documents-heading">
+                <span class="claim-eyebrow">DOCUMENT CHECKLIST</span>
+                <h3>รายการเอกสารที่ควรเตรียม</h3>
+                <p>
+                    รายการด้านล่างเป็นแนวทางเบื้องต้น
+                    เอกสารจริงอาจแตกต่างกันตามประเภทการเคลม
+                    และข้อกำหนดของบริษัทประกันภัย
+                </p>
+            </div>
+            <div class="claim-checklist">
+                <div class="claim-check-item">
+                    <span class="claim-check-icon">✓</span>
+                    <div>
+                        <strong>เอกสารยืนยันตัวตน</strong>
+                        <p>บัตรประจำตัวประชาชนหรือเอกสารที่ใช้ยืนยันตัวผู้เอาประกันภัย</p>
+                    </div>
+                </div>
+                <div class="claim-check-item">
+                    <span class="claim-check-icon">✓</span>
+                    <div>
+                        <strong>แบบฟอร์มเรียกร้องสินไหม</strong>
+                        <p>กรอกข้อมูลและลงนามในแบบฟอร์มตามที่บริษัทกำหนด</p>
+                    </div>
+                </div>
+                <div class="claim-check-item">
+                    <span class="claim-check-icon">✓</span>
+                    <div>
+                        <strong>เอกสารทางการแพทย์</strong>
+                        <p>ใบรับรองแพทย์ ใบเสร็จรับเงิน หรือเอกสารการรักษาที่เกี่ยวข้อง หากเป็นการเคลมค่ารักษาพยาบาล</p>
+                    </div>
+                </div>
+                <div class="claim-check-item">
+                    <span class="claim-check-icon">✓</span>
+                    <div>
+                        <strong>เอกสารประกอบอื่น ๆ</strong>
+                        <p>หลักฐานเกี่ยวกับเหตุการณ์และเอกสารเพิ่มเติมตามเงื่อนไขของกรมธรรม์</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Important information -->
+        <div class="claim-conditions">
+            <h3>เงื่อนไขและข้อควรระวัง</h3>
+            <ol>
+                <li>
+                    การยื่นคำร้องไม่ได้หมายความว่าจะได้รับการอนุมัติค่าสินไหม
+                    โดยอัตโนมัติ บริษัทประกันภัยจะพิจารณาตามกรมธรรม์
+                    และหลักฐานที่เกี่ยวข้อง
+                </li>
+                <li>
+                    ควรยื่นเอกสารภายในระยะเวลาที่กำหนด
+                    และเก็บสำเนาเอกสารทั้งหมดไว้เป็นหลักฐาน
+                </li>
+                <li>
+                    หากเอกสารไม่ครบถ้วน บริษัทประกันภัยอาจขอข้อมูลเพิ่มเติม
+                    ซึ่งอาจส่งผลต่อระยะเวลาการพิจารณา
+                </li>
+                <li>
+                    รายการเอกสาร วงเงิน และเงื่อนไขการจ่ายค่าสินไหม
+                    ให้ยึดตามกรมธรรม์ฉบับที่นักศึกษาถือครองเป็นสำคัญ
+                </li>
+            </ol>
+        </div>
+        <!-- Contact -->
+        <div class="claim-contact">
+            <div>
+                <span class="claim-eyebrow">NEED MORE INFORMATION?</span>
+                <h3>ต้องการสอบถามข้อมูลเพิ่มเติม?</h3>
+                <p>
+                    ติดต่อหน่วยงานผู้ดูแลประกันภัยนักศึกษา
+                    หรือบริษัทประกันภัยตามช่องทางที่ระบุในกรมธรรม์
+                </p>
+            </div>
+            <a href="ติดต่อ.html" class="claim-contact-btn">
+                ติดต่อเจ้าหน้าที่ <span>→</span>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- Insurance Claim Procedure End -->
+        
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <a href="หน้าหลัก.html">
+                <h1 class="display-4 mb-3 text-white text-uppercase"><i class="fa-regular fa-face-smile me-1"></i>SWU</h1>
+            </a>
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-x-twitter"></i></a>
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <!--/*** The author’s attribution link must remain intact in the template. ***/-->
+            <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
+            <p class="mb-0">Designed By <a class="border-bottom" href="เกี่ยวกับเรา.html">วอดวาย</a></p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

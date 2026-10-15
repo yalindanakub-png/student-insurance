@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ | Poseify Insurance</title>
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Work+Sans:wght@400;600&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --pink: #ff1685;
+            --black: #101014;
+            --dark: #19191f;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background:
+                radial-gradient(circle at 15% 15%, #35202d 0, transparent 35%),
+                radial-gradient(circle at 90% 85%, #41132c 0, transparent 30%),
+                var(--black);
+            color: var(--white);
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 1000px;
+            min-height: 560px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #fff;
+            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
+        }
+
+        /* ฝั่งต้อนรับ */
+        .welcome-panel {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px 45px;
+            background: linear-gradient(145deg, #ff1685, #a20b58);
+        }
+
+        .welcome-panel::before,
+        .welcome-panel::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(20, 15, 22, 0.25);
+        }
+
+        .welcome-panel::before {
+            width: 330px;
+            height: 330px;
+            top: -110px;
+            right: -160px;
+        }
+
+        .welcome-panel::after {
+            width: 260px;
+            height: 260px;
+            bottom: -130px;
+            left: -90px;
+        }
+
+        .welcome-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .brand {
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-bottom: 55px;
+        }
+
+        .welcome-panel h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 15px;
+        }
+
+        .welcome-panel h2 {
+            font-size: 17px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .welcome-panel p {
+            max-width: 350px;
+            font-size: 14px;
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .welcome-tag {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 9px 17px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 30px;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        /* ฝั่งแบบฟอร์ม */
+        .login-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 55px 50px;
+            background: #fff;
+            color: #222;
+        }
+
+        .login-panel h2 {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .login-description {
+            font-size: 12px;
+            color: #777;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            width: 100%;
+            height: 48px;
+            padding: 0 15px;
+            border: 1px solid #dedee3;
+            border-radius: 8px;
+            outline: none;
+            font-size: 13px;
+            background: #f8f8fa;
+            color: #222;
+            transition: 0.25s;
+        }
+
+        .form-group input:focus {
+            border-color: var(--pink);
+            box-shadow: 0 0 0 3px rgba(255, 22, 133, 0.1);
+            background: #fff;
+        }
+
+        .password-wrap {
+            position: relative;
+        }
+
+        .password-wrap input {
+            padding-right: 65px;
+        }
+
+        .show-password {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: transparent;
+            color: var(--pink);
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin: 3px 0 25px;
+            font-size: 11px;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #666;
+        }
+
+        .remember input {
+            accent-color: var(--pink);
+        }
+
+        a {
+            color: var(--pink);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .login-button {
+            width: 100%;
+            height: 49px;
+            border: none;
+            border-radius: 8px;
+            background: var(--pink);
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.25s;
+            box-shadow: 0 6px 18px rgba(255, 22, 133, 0.22);
+        }
+
+        .login-button:hover {
+            background: #e60d73;
+            transform: translateY(-2px);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 22px 0;
+            color: #999;
+            font-size: 11px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #e5e5e5;
+        }
+
+        .back-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 45px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            color: #444;
+            font-size: 12px;
+            transition: 0.25s;
+        }
+
+        .back-button:hover {
+            border-color: var(--pink);
+            color: var(--pink);
+            text-decoration: none;
+        }
+
+        .register-text {
+            text-align: center;
+            margin-top: 27px;
+            color: #777;
+            font-size: 12px;
+        }
+
+        .register-text a {
+            font-weight: 600;
+            margin-left: 4px;
+        }
+
+        .login-message {
+            display: none;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 7px;
+            background: #191919 ;
+            color: #c20c63;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 18px;
+            }
+
+            .login-container {
+                max-width: 430px;
+                grid-template-columns: 1fr;
+            }
+
+            .welcome-panel {
+                min-height: 230px;
+                padding: 30px;
+            }
+
+            .brand {
+                margin-bottom: 22px;
+            }
+
+            .welcome-panel h1 {
+                font-size: 30px;
+            }
+
+            .welcome-panel h2 {
+                font-size: 14px;
+            }
+
+            .welcome-panel p {
+                font-size: 12px;
+            }
+
+            .welcome-tag {
+                margin-top: 18px;
+            }
+
+            .login-panel {
+                padding: 35px 25px;
+            }
+
+            .login-panel h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("loginForm");
+
+    if (!form) {
+        console.error("ไม่พบฟอร์ม loginForm");
+        return;
+    }
+
+    const studentId = document.getElementById("studentId");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirmPassword");
+    const message = document.getElementById("loginMessage");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (!studentId || !password || !confirmPassword || !message) {
+            console.error("ไม่พบช่องข้อมูลที่จำเป็น กรุณาตรวจสอบ id ของ HTML");
+            return;
+        }
+
+        message.className = "login-message";
+        message.textContent = "";
+
+        if (!/^\d{1,13}$/.test(studentId.value)) {
+            message.classList.add("error");
+            message.textContent =
+                "กรุณากรอกรหัสนิสิตเป็นตัวเลข ไม่เกิน 13 หลัก";
+            return;
+        }
+
+        if (password.value.length < 8) {
+            message.classList.add("error");
+            message.textContent =
+                "รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษร";
+            return;
+        }
+
+        if (password.value !== confirmPassword.value) {
+            message.classList.add("error");
+            message.textContent =
+                "รหัสผ่านทั้งสองช่องไม่ตรงกัน กรุณาลองใหม่";
+            return;
+        }
+
+        message.className = "login-message success";
+        message.textContent = "สมัครสำเร็จ กำลังกลับสู่หน้าหลัก...";
+
+        setTimeout(function () {
+            window.location.href = "./index.html";
+        }, 800);
+    });
+});
+</script>
+</body>
+</html>
+
+<body>
+
+    <main class="login-container">
+
+        <!-- ฝั่งซ้าย -->
+        <section class="welcome-panel">
+            <div class="welcome-content">
+                <div class="brand">POSEIFY · INSURANCE</div>
+
+                <h1>WELCOME</h1>
+                <h2>YOUR FUTURE, YOUR PROTECTION</h2>
+
+                <p>
+                    ยินดีต้อนรับเข้าสู่ระบบประกันสำหรับนักศึกษา
+                    ตรวจสอบข้อมูลประกันและจัดการข้อมูลของคุณ
+                    ได้อย่างสะดวกในที่เดียว
+                </p>
+
+                <span class="welcome-tag">STUDENT INSURANCE PLATFORM</span>
+            </div>
+        </section>
+
+        <!-- ฝั่งขวา -->
+        <section class="login-panel">
+            <h2>เข้าสู่ระบบ</h2>
+
+            <p class="login-description">
+                เข้าสู่ระบบด้วยรหัสนักศึกษาของคุณ
+                เพื่อจัดการข้อมูลประกันและตรวจสอบสิทธิ์
+            </p>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="studentId">รหัสนักศึกษา</label>
+                    <input
+                        type="text"
+                        id="studentId"
+                        name="studentId"
+                        placeholder="กรอกรหัสนักศึกษา"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+    <div class="form-group">
+        <label for="email">อีเมล</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="กรอกอีเมลของคุณ"
+            autocomplete="email"
+            required
+        >
+    </div>
+
+    <div class="form-group">
+        <label for="password">รหัสผ่าน</label>
+        <div class="password-wrap">
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="กรอกรหัสผ่าน"
+                autocomplete="new-password"
+                required
+            >
+            <button type="button" class="show-password"
+                data-target="password">แสดง</button>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="confirmPassword">ยืนยันรหัสผ่าน</label>
+        <div class="password-wrap">
+            <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="กรอกรหัสผ่านอีกครั้ง"
+                autocomplete="new-password"
+                required
+            >
+            <button type="button" class="show-password"
+                data-target="confirmPassword">แสดง</button>
+        </div>
+    </div>
+
+    <div class="login-message" id="loginMessage" role="alert"></div>
+
+    <button type="submit" class="login-button">
+        เข้าสู่ระบบ
+    </button>
+
+</form>
